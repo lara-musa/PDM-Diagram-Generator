@@ -5,7 +5,7 @@ This project offers a straightforward HTML solution for generating PDM style dia
 This project provides a drag-and-drop template for creating PDMs with editable text fields. This solution is perfect for users who want a clean, intuitive way to put together PDM diagrams quickly and without the hassle of tediously moving around many task boxes and interestingly shaped arrows. The tables include textfields for **early start**, **early finish**, **late start**, **late finish**, **task duration**, and **total slack / float**. 
 
 ## ⊹ Why This Solution?
-While I would generally reccomend [**Mermaid**](https://mermaid.js.org/) for diagam generation since its code based and easy to adit, but it can be challenging for creating and managing PDM-style tables. Using powerpoint or similar diagram editing software is too tedious, and drawing diagrams by hand is not very professional looking. This HTML-based approach provides:
+While I would generally reccomend [**Mermaid**](https://mermaid.js.org/) for diagam generation since its code based and easy to edit, but it can be challenging for creating and managing PDM-style tables. Using powerpoint or similar diagram editing software is too tedious, and drawing diagrams by hand is not very professional looking. This HTML-based approach provides:
 * Great Control over table structure.
 * Simplicity in Editing by allowing users to click and fill in cells.
 * Ease of Arrangement to achieve professional-looking diagrams with minimal effort.
