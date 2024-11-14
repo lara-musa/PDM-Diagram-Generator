@@ -170,7 +170,7 @@
         }
 
         function UpdateArrows() {
-            // Clear existing content
+            // Clearing existing content
             draw.clear();
 
             const PADDING = 5;
@@ -178,13 +178,12 @@
             const TOTAL_OFFSET = PADDING + BORDER;
             const CONNECTION_SPACING = 15;
 
-            // Count connections for both from and to tables
+            // Counting connections from and to tables
             const fromConnectionCounts = {};
             const toConnectionCounts = {};
             const fromTableConnections = {};
             const toTableConnections = {};
 
-            // First pass - count all connections
             connections.forEach(conn => {
                 fromConnectionCounts[conn.from] = (fromConnectionCounts[conn.from] || 0) + 1;
                 toConnectionCounts[conn.to] = (toConnectionCounts[conn.to] || 0) + 1;
@@ -207,7 +206,7 @@
                     const totalFromConnections = fromConnectionCounts[conn.from];
                     const totalToConnections = toConnectionCounts[conn.to];
 
-                    // Calculate centers using table dimensions
+                    // Calculating centers
                     const fromCenter = {
                         x: fromTable.offsetLeft + (fromTable.offsetWidth / 2),
                         y: fromTable.offsetTop + (fromTable.offsetHeight / 2)
@@ -218,12 +217,12 @@
                         y: toTable.offsetTop + (toTable.offsetHeight / 2)
                     };
 
-                    // Determine primary direction
+                    // Determining directions
                     const horizontalDistance = Math.abs(fromCenter.x - toCenter.x);
                     const verticalDistance = Math.abs(fromCenter.y - toCenter.y);
                     const isHorizontal = horizontalDistance > verticalDistance;
 
-                    // Calculate offsets for both ends
+                    // Calculatig offsets
                     const fromOffset = CONNECTION_SPACING * (fromIndex - (totalFromConnections - 1) / 2);
                     const toOffset = CONNECTION_SPACING * (toIndex - (totalToConnections - 1) / 2);
 
@@ -253,7 +252,7 @@
 
                     const midX = points.from.x + (points.to.x - points.from.x) / 2;
 
-                    // Arrow drawing logic
+                    // Drawing Arrows
                     const arrowSize = 10;
                     const offsetFromEdge = arrowSize;
 
@@ -298,10 +297,10 @@
                         }
                     }
 
-                    // Draw the arrowhead
+                    // Drawing arrowheads
                     draw.polygon(arrowPoints).fill('#333');
 
-                    // Draw the path
+                    // Drawing the path
                     draw.path(
                         `M ${points.from.x} ${points.from.y} 
                         ${isHorizontal 
@@ -318,7 +317,7 @@
 
         function ClearConnections() {
             connections = [];
-            updateArrows();
+            UpdateArrows();
         }
 </script>
 </body>
