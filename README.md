@@ -27,3 +27,7 @@ While I would generally reccomend [**Mermaid**](https://mermaid.js.org/) for dia
 
 ## Hopefully in the Future
 I'm hoping to edit this code when I have time to accept critical path input and highlight it in red, or better yet, perhaps calculate the critical path according to user task duration input.
+
+## License
+Creative Commons CC-BY-NC-4.0
+
